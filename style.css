@@ -32,7 +32,7 @@ body{
 
 
 
-/* -------------------- STYLES ACTION FIELD: GRID CONTAINER & COLOR PICKER */
+/* -------------------- STYLES ACTION FIELD: GRID CONTAINER & DELETE & COLOR PICKER */
 
 .actionField{
     width: 100%;
@@ -40,9 +40,39 @@ body{
     align-items: center;
 }
 
+.delete{
+    width: 30%;
+    /* background-color:darkcyan; */
+    height: 100%;
+    width: 500px;
+    position: relative;
+}
+
+.delete-wrapper{
+    border: 6px solid white;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 375px;
+    top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#delete{
+    font-size: 30px;
+    cursor: pointer;
+    width: 500px;
+    position: absolute;
+    left: 30px;
+}
+
+
 .gridWrapper{
-    width: 70%;
-    /*background-color: blue;*/
+    width: 40%;
+   /*background-color: blue; */
 }
 
 #gridContainer{
@@ -54,7 +84,7 @@ body{
     grid-template-columns: repeat(var(--grid-col), 1fr);
     margin-top: 10px;
     position: relative;
-    left: 450px;
+    left: 30px;
 }
 
 #gridContainer div:hover{
@@ -64,17 +94,20 @@ body{
  
 
 .colorpickerWrapper{
-    width: 20%;
-    /* background-color: green;*/
-    height: 200px;
+    width: 30%;
+    /* background-color: green; */
+    height:100%;
     position: relative;
-    top: 40px;
     
 }
+
 .colorPicker{
     width: 500px;
-  
+    position: absolute;
+    top: 200px;
 }
+
+
 
 #colorPicker{
     width: 100px;

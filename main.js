@@ -16,10 +16,26 @@ function createGridOfDiv(row, col){
         gridContainer.appendChild(div),className = 'gridElement';
        
     }
-
+   
 }
 
-createGridOfDiv(16, 16);
+function createDefaultGrid(){
+    createGridOfDiv(16, 16);
+}
+
+createDefaultGrid();
+
+
+function createIndividualGrid(x, x){
+    const changegridSizeInput = document.getElementById('changegridSizeInput')
+    x = changegridSizeInput.value;
+    console.log(x)
+    createGridOfDiv(x, x);
+}
+
+
+
+
 
 
 
