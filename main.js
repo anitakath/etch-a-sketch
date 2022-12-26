@@ -23,9 +23,7 @@ function createGrid(a){
 
     for(let i = 0; i < amount; i++){
       let div = document.createElement('div');
-      div.addEventListener('mouseover', () => {
-          div.style.backgroundColor = 'black';
-      });
+      div.addEventListener('mouseover', changeColor);
 
 
       //a bit of styling so that we can distinguish the divs from each other
@@ -42,34 +40,55 @@ function createGrid(a){
 
 
 
+// declare a function that changes the color with the chosen value from the color picker
+
+
+function changeColor(){
+    let color = document.getElementById('color').value;
+
+    this.style.backgroundColor = color;
+}
+
+//declare a function that creates random colors
+
+function getRandomColor(){
+    let randomColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+    this.style.backgroundColor = randomColor;
+    
+}
+
+// declare a function that checks whether changeColor or getRandomColor should work
+
+
+
 
 // use the general formula to create a specific grid
 // add the specified formula to your buttons, so users can change the size of the grid by clicking the buttons
 // style the active button so that the user knows which large button he is on
-const ten = document.querySelector('.ten')
+const hundred = document.querySelector('.hundred')
 const twenty = document.querySelector('.twenty')
 const seventy = document.querySelector('.seventy')
-let tenToActive = document.getElementById('tenToActive')
+let hundredToActive = document.getElementById('hundredToActive')
 let twentyToActive = document.getElementById('twentyToActive')
 let seventyToActive = document.getElementById('seventyToActive')
 
-ten.addEventListener('click', ()=>{
+hundred.addEventListener('click', ()=>{
     twentyToActive.classList.remove('active')
     seventyToActive.classList.remove('active')
-    tenToActive.classList.add('active')
+    hundredToActive.classList.add('active')
 
-    createGrid(10);
+    createGrid(100);
 })
 
 twenty.addEventListener('click', ()=>{
-    tenToActive.classList.remove('active')
+    hundredToActive.classList.remove('active')
     seventyToActive.classList.remove('active')
     twentyToActive.classList.add('active')
     createGrid(20);
 })
 
 seventy.addEventListener('click', ()=>{
-    tenToActive.classList.remove('active')
+    hundredToActive.classList.remove('active')
     twentyToActive.classList.remove('active')
     seventyToActive.classList.add('active')
     createGrid(70);
@@ -83,7 +102,7 @@ seventy.addEventListener('click', ()=>{
 const deleteBtn = document.querySelector('.circleDelete')
 
 deleteBtn.addEventListener('click', ()=>{
-    tenToActive.classList.remove('active')
+    hundredToActive.classList.remove('active')
     twentyToActive.classList.remove('active')
     seventyToActive.classList.remove('active')
     let squares = theGrid.querySelectorAll('div')

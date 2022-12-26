@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 *{
     box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bolder;
+    letter-spacing: 2px;
 }
 
 :root{
@@ -26,14 +31,20 @@ body{
 header{
     width: 100%;
     height: 10vh;
-   /*  background-color: purple; */
+   /* background-color: purple; */
+    position: relative;
+    top: -10px;
+   
+  
    
 }
 
 #title{
-    
     width: 100%;
+    height: 10vh;
+    /* background-color: lightslategrey; */
     text-align: center;
+    position: absolute;
 }
 
 
@@ -43,9 +54,13 @@ header{
 
 main{
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     /* background-color: red; */
     display: flex;
+    /*border: 2px solid purple; */
+    position: relative;
+    top: -15px;
+   padding: 10px;
     
 }
 
@@ -125,19 +140,22 @@ footer{
     /*background-color: green; */
     display: flex;
     justify-content: center;
+    margin-top: 15px;
 }
 
 
 .toolbox{
-    width: 50%;
-   /* background-color: yellow;*/
+    width: 100%;
+   /*background-color: yellow;*/
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .flex-item{
    width: 200px;
     /* background-color: green; */
+    /*border: 2px solid purple;*/
     margin: 10px;
     display: flex;
     justify-content: center;
@@ -188,6 +206,7 @@ footer{
     height: 100px;
     border-radius: 50%;
     background-color: #a52a2a;
+    color: white;
     margin: 20px;
     cursor: pointer;
     display: flex;
@@ -196,11 +215,13 @@ footer{
    
 }
 
+
 .circleColor{
     justify-content:flex-start;
-    position: relative;
-    
+    position: relative;   
 }
+
+
 /*
 #colorWrapper{
     width: 100px;
@@ -241,7 +262,7 @@ footer{
 
 
 .circle:hover{
-    border: 2px solid white;
+   
     transition: 0.3 ease;
     box-shadow: 1px 1px  30px silver;
 }
@@ -273,11 +294,20 @@ footer{
    
 }
 
+#magic{
+   background-image: url('rainbow.jpg');
+   background-size: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: black;
 
-
-
-
-
+}
 
 
 
