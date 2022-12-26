@@ -1,37 +1,120 @@
 // set important variables for grid painting field
 
-const gridContainer = document.getElementById('gridContainer')
+let theGrid = document.getElementById('theGrid')
 
-// set function to create a 16x16 grid of divs
+// CREATE GRID that takes a variable 
 
-function createGridOfDiv(row, col){
-    gridContainer.style.setProperty('--grid-row', row);
-    gridContainer.style.setProperty('--grid-col', col);
-    for(i = 0; i < (row * col); i++){
-        let div = document.createElement('div');
-        div.innerText = (i+1);
-        div.style.border = '1px solid grey';
-        div.style.color = 'white'
-        
-        gridContainer.appendChild(div),className = 'gridElement';
-       
+function createGrid(a){
+
+   // remove already existing divs at first
+    let squares = theGrid.querySelectorAll('div')
+    squares.forEach((div) => div.remove());
+
+    // declare the desired number of rows and columns
+    theGrid.style.gridTemplateColumns = `repeat(${a}, 1fr)`;
+    theGrid.style.gridTemplateRows = `repeat(${a}, 1fr)`;
+
+
+    // set a variable that calculates width & height from a, so we can declare it in our for loop
+    let amount = a * a;
+
+
+    // loop through the desired number of divs, create the divs and attach them to theGrid
+
+    for(let i = 0; i < amount; i++){
+      let div = document.createElement('div');
+      div.addEventListener('mouseover', () => {
+          div.style.backgroundColor = 'black';
+      });
+
+
+      //a bit of styling so that we can distinguish the divs from each other
+
+      // div.style.border = '1px solid black'
+      //div.innerText = i+1 
+      //div.style.color = 'red'
+      theGrid.appendChild(div)
+ 
     }
-   
 }
 
-function createDefaultGrid(){
-    createGridOfDiv(16, 16);
-}
-
-createDefaultGrid();
+/* createGrid(100);*/
 
 
-function createIndividualGrid(x, x){
-    const changegridSizeInput = document.getElementById('changegridSizeInput')
-    x = changegridSizeInput.value;
-    console.log(x)
-    createGridOfDiv(x, x);
-}
+
+
+// use the general formula to create a specific grid
+// add the specified formula to your buttons, so users can change the size of the grid by clicking the buttons
+// style the active button so that the user knows which large button he is on
+const ten = document.querySelector('.ten')
+const twenty = document.querySelector('.twenty')
+const seventy = document.querySelector('.seventy')
+let tenToActive = document.getElementById('tenToActive')
+let twentyToActive = document.getElementById('twentyToActive')
+let seventyToActive = document.getElementById('seventyToActive')
+
+ten.addEventListener('click', ()=>{
+    twentyToActive.classList.remove('active')
+    seventyToActive.classList.remove('active')
+    tenToActive.classList.add('active')
+
+    createGrid(10);
+})
+
+twenty.addEventListener('click', ()=>{
+    tenToActive.classList.remove('active')
+    seventyToActive.classList.remove('active')
+    twentyToActive.classList.add('active')
+    createGrid(20);
+})
+
+seventy.addEventListener('click', ()=>{
+    tenToActive.classList.remove('active')
+    twentyToActive.classList.remove('active')
+    seventyToActive.classList.add('active')
+    createGrid(70);
+})
+
+
+
+// put an eventlistener on our delete button
+// delete all divs from theGrid, when the delete button is clicked
+
+const deleteBtn = document.querySelector('.circleDelete')
+
+deleteBtn.addEventListener('click', ()=>{
+    tenToActive.classList.remove('active')
+    twentyToActive.classList.remove('active')
+    seventyToActive.classList.remove('active')
+    let squares = theGrid.querySelectorAll('div')
+    squares.forEach((div) => div.remove());
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+// declare an eventlistener on the colorbrush, so when it is clicked the input type=color appears
+
+const colorPicker = document.getElementById('color')
+const circleColor = document.querySelector('.circleColor')
+/*
+colorPicker.style.visibility = 'hidden'
+
+circleColor.addEventListener('click', () =>{
+    colorPicker.style.visibility = 'visible'
+})*/
+
+
 
 
 
@@ -58,8 +141,4 @@ function errorMsg(){
     }
 
 }
-
-// set a function that adjusts the grid size to the input
-
-
 
