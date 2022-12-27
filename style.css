@@ -50,10 +50,12 @@ header{
 }
 
 #madeBy{
-    width: 18%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
     position: absolute;
     right: 10px;
-    margin: 5px;
+    margin: 5px 60px;
    /*  background-color: red; */
 }
 
