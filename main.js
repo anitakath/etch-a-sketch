@@ -23,7 +23,7 @@ function createGrid(a){
 
     for(let i = 0; i < amount; i++){
       let div = document.createElement('div');
-      div.addEventListener('mouseover', changeColor);
+      div.addEventListener('mouseover', divColor);
 
 
       //a bit of styling so that we can distinguish the divs from each other
@@ -43,19 +43,34 @@ function createGrid(a){
 // declare a function that changes the color with the chosen value from the color picker
 
 
-function changeColor(){
-    let color = document.getElementById('color').value;
+function divColor(){
+    
 
+    if(color == 'random'){
+       this.style.backgroundColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+    } else{
+        let color = document.getElementById('color').value;
+       this.style.backgroundColor = color;
+    }
+}
+
+function changeColor(choice){
+    color = choice;
+}
+/*
+function getYourColor(){
+    let color = document.getElementById('color').value;
     this.style.backgroundColor = color;
 }
 
 //declare a function that creates random colors
 
 function getRandomColor(){
+    let magic = document.querySelector('.magic')
     let randomColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
     this.style.backgroundColor = randomColor;
     
-}
+}*/
 
 // declare a function that checks whether changeColor or getRandomColor should work
 

@@ -13,10 +13,14 @@
 
 
     <header>
-        <div class="flexHeader" id="title">
+       
+        <div class="header" id="title">
             <h1> Etch a Sketch!</h1>
         </div>
-    
+        <div class="header" id="madeBy">
+            <p> made by anitakath 🐣 </p>
+        </div>
+       
 
     </header>
 
@@ -40,10 +44,10 @@
 
         <div class="toolbox">
 
-            <div class="flex-item one">
+            <div class="flex-item">
                 <div class="circle circleColor">
                     
-                    <input id="color"  type="color" value="#a52a2a" />
+                    <input id="color"  type="color" value="#a52a2a" onclick="changeColor()"/>
                     
                     <i class="fa-solid fa-brush" id="colorBrush"></i>
                    
@@ -52,7 +56,7 @@
 
             </div>
 
-            <div class="flex-item two" id="size">
+            <div class="flex-item " id="size">
 
                  <!--
                 <label for="range"> change the grids size</label>
@@ -62,31 +66,31 @@
                
 
                
-                 <div class="circlesDiv innerCirclesDiv">
-                    <div class="circle circleSize" class="magic">
+                 <div class="circlesDiv ">
+                    <div class="circle circleSize" class="magic" onclick="changeColor('random')">
                         <i class="fa-solid fa-wand-magic-sparkles" id="magic"></i>
                     </div>
                  </div>
 
 
-                <div class="circlesDiv innerCirclesDiv">
-                    <div class="circle circleSize twenty" id="twentyToActive">
-                        <span class="sizeSpan twenty" id="twenty"> 20 x 20</span>
+                <div class="postItDiv ">
+                    <div class="postIt circleSize twenty" id="twentyToActive">
+                        <span class="twenty" id="twenty"> 20 x 20</span>
                     </div>
 
                 </div>
 
 
-                <div class="circlesDiv innerCirclesDiv">
-                    <div class="circle circleSize seventy" id="seventyToActive">
-                        <span class="sizeSpan seventy" id="twenty"> 70 x 70</span>
+                <div class="postItDiv ">
+                    <div class="postIt circleSize seventy" id="seventyToActive">
+                        <span class=" seventy" id="twenty"> 70 x 70</span>
                     </div>
 
                 </div>
 
-                <div class="circlesDiv innerCirclesDiv">
-                    <div class="circle circleSize hundred" id="hundredToActive">
-                        <span class="sizeSpan hundred" id="ten"> 100 x 100</span>
+                <div class="postItDiv">
+                    <div class="postIt circleSize hundred" id="hundredToActive">
+                        <span class=" hundred" id="ten"> 100 x 100</span>
     
                     </div>
                 </div>
@@ -97,7 +101,7 @@
             </div>
 
 
-            <div class="flex-item three">
+            <div class="flex-item ">
                 <div class="circle circleDelete">
                     <div class="onlyABorderForDelete">
                         <i class="fa-solid fa-trash" id="delete"></i>

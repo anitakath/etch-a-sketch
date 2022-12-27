@@ -1,3 +1,4 @@
+/* -------------------------------------------------------------------------------------------  ABOUT THE GENERAL */
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 *{
@@ -20,63 +21,66 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    
-   
+    flex-direction: column;  
 }
 
 
-/* -------------------- STYLES TITLE FIELD */
+
+/* -------------------------------------------------------------------------------------------  ABOUT THE HEADER */
 
 header{
     width: 100%;
     height: 10vh;
-   /* background-color: purple; */
     position: relative;
-    top: -10px;
-   
-  
-   
+    display: flex;
+   /* background-color: purple; */
+}
+
+.header{
+    
+    
+    display: flex;
+    position: relative;
 }
 
 #title{
     width: 100%;
-    height: 10vh;
-    /* background-color: lightslategrey; */
-    text-align: center;
+    
+    justify-content: center;
+}
+
+#madeBy{
+    width: 43%;
+    justify-content: right;
     position: absolute;
+    right: 10px;
+    margin: 5px;
 }
 
 
 
 
-/* -------------------- STYLES ACTION FIELD: GRID CONTAINER & DELETE & COLOR PICKER */
+
+/* -------------------------------------------------------------------------------------------  ABOUT THE MAIN  */
+/* GRID FIELD */
 
 main{
     width: 100%;
     height: 70vh;
-    /* background-color: red; */
+    /* background-color: red; */ 
     display: flex;
     /*border: 2px solid purple; */
     position: relative;
+    top: 30px;
+    padding: 10px;
     top: -15px;
-   padding: 10px;
     
-}
-
-.gridWrapper{
-    width: 100%;
-    height: 100%;
-    /*background-color: red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 
 #grid{
     flex-grow: 2;
-    /* background-color: orange;  */
+    /* background-color: orange; */ 
     display: flex;
     justify-content: center;
 }
@@ -91,48 +95,10 @@ main{
     grid-template-rows: repeat(var(--gird-rows), 1fr);
     grid-template-columns: repeat(var(--grid-col), 1fr);
     margin-top: 10px;*/
-    
-    
 }
 
 
-
-.grid10{
-    grid-template-columns: repeat(10, auto);
-    grid-template-rows: repeat(10, auto);
-    border: 2px solid black;
-   
-}
-.grid20{
-    grid-template-columns: repeat(20, auto);
-    grid-template-rows: repeat(20, auto);
-    border: 2px solid black;
-}
-/*
-.grid10 > div{
-    height: 50px;
-    width: 50px;
-}
-
-
-
-.grid20 > div{
-    height: 30px;
-    width: 30px;
-}
-
-.grid40{
-    grid-template-columns: repeat(40, auto);
-}
-
-.grid10 > div{
-    height: 20px;
-    width: 20px;
-}
-
-
-*/
-
+/* -------------------------------------------------------------------------------------------  ABOUT THE FOOTER */
 
 footer{
     height: 20vh;
@@ -140,7 +106,7 @@ footer{
     /*background-color: green; */
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    
 }
 
 
@@ -161,7 +127,12 @@ footer{
     justify-content: center;
 }
 
-
+#size{
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+}
+/* -------------------------------------------------------------------------------------------  ABOUT THE COLOR PICKER */
 
 
 .circleColor, .circleDelete{
@@ -171,9 +142,7 @@ footer{
 
 }
 
-.circleDelete{
-    justify-content: center;
-}
+
 
 #color{
     width: 100%;;
@@ -182,25 +151,20 @@ footer{
   
 }
 
-#size{
-    flex-grow: 2;
-    display: flex;
-    justify-content: center;
-}
+/* -------------------------------------------------------------------------------------------  ABOUT THE FLEX-ITEM 2 (POST ITS) */
 
-.circlesDiv{
+.circlesDiv, .postItDiv{
     width: 250px;
     /* border:2px solid grey; */
-}
-
-.innerCirclesDiv{
-    margin-left: 10px;
+     margin-left: 10px;
     margin-right: 10px;
     width: 300px;
     /* background-color: pink; */
     display: flex;
     justify-content: center;
 }
+
+
 .circle{
     width: 100px;
     height: 100px;
@@ -215,6 +179,34 @@ footer{
    
 }
 
+.postItDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.postIt{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    color: black;
+    box-shadow: 10px 10px  grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    margin: 2px;
+    font-size: 20px;
+}
+
+.postIt:hover{
+    background-color: #a52a2a;
+    box-shadow: 10px 10px  hsl(0, 0%, 30%);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
 
 .circleColor{
     justify-content:flex-start;
@@ -222,17 +214,11 @@ footer{
 }
 
 
-/*
-#colorWrapper{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: green;
-    z-index:10;
-}
-*/
+
+
+
 #color{
-    -webkit-appearance: none;
+  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   background-color: transparent;
@@ -260,26 +246,21 @@ footer{
 }
 
 
-
 .circle:hover{
-   
     transition: 0.3 ease;
     box-shadow: 1px 1px  30px silver;
 }
 
+
 .active{
     transition: 0.3 ease;
     box-shadow: 1px 1px  30px silver;
+    
 }
 
 .circle:active{
     transform: scale(0.95);
     transition: 0.5 ease;
-}
-
-.sizeSpan{
-    margin: 2px;
-    font-size: 20px;
 }
 
 
@@ -306,6 +287,7 @@ footer{
     align-items: center;
     font-size: 25px;
     color: black;
+   
 
 }
 
