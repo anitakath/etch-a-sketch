@@ -13,7 +13,7 @@
 
 
     <header>
-       
+
         <div class="header" id="title">
             <h1> Etch a Sketch!</h1>
         </div>
@@ -32,7 +32,7 @@
         </div>
        
                 
-            </div>
+           
             
         </div>
     </main>
@@ -41,54 +41,71 @@
 
 
     <footer>
+     
 
         <div class="toolbox">
 
-            <div class="flex-item">
-                <div class="circle circleColor">
-                    
-                    <input id="color"  type="color" value="#a52a2a" onclick="changeColor()"/>
-                    
-                    <i class="fa-solid fa-brush" id="colorBrush"></i>
-                   
+            <div class="flex-item" id="mobileRightFirst">
+                <div class="circle circleDelete">
+                    <div >
+                        <i class="fa-solid fa-trash" id="delete"></i>
+                    </div>
                    
                 </div>
+                
+            </div>
+            <div class="flex-item" id="mobileRightSecond">
+                <div class="circlesDiv">
+                    <div class="circle circleColor">
+                    
+                        <input id="color"  type="color" value="#FFFFFF" onclick="changeColor()"/>
+                        
+                        <i class="fa-solid fa-brush" id="colorBrush"></i>
+                      
+                       
+                    </div>
+
+                </div>
+
+               
 
             </div>
 
-            <div class="flex-item " id="size">
+            <div class="flex-item" id="mobileRightThird">
+                <div class="circlesDiv">
+                    <div class="magical">
+                        <div class="circle circleSize" class="magic" onclick="changeColor('random')">
+                            <i class="fa-solid fa-wand-magic-sparkles" id="magic"></i>
+                        </div>
+                     </div>
 
-                 <!--
-                <label for="range"> change the grids size</label>
-                <input type="range" id="range" name="size" min="10" max="100" value="20" data-sizing="px">>    
-                 -->
-
+                </div>
                
-
-               
-                 <div class="circlesDiv ">
-                    <div class="circle circleSize" class="magic" onclick="changeColor('random')">
-                        <i class="fa-solid fa-wand-magic-sparkles" id="magic"></i>
-                    </div>
-                 </div>
+            </div>
 
 
-                <div class="postItDiv ">
+            <div class="flex-item" id="mobileLeftFirst">
+                <div class="postItDiv first" id="size" >
                     <div class="postIt circleSize twenty" id="twentyToActive">
                         <span class="twenty" id="twenty"> 20 x 20</span>
                     </div>
 
                 </div>
+            </div>
 
-
-                <div class="postItDiv ">
+            <div class="flex-item" id="mobileLeftSecond">
+                <div class="postItDiv second" id="size" >
                     <div class="postIt circleSize seventy" id="seventyToActive">
                         <span class=" seventy" id="twenty"> 70 x 70</span>
                     </div>
 
                 </div>
+            </div>
 
-                <div class="postItDiv">
+
+
+            <div class="flex-item" id="size" id="mobileLeftThird">
+                <div class="postItDiv third"id="mobileLeftThird">
                     <div class="postIt circleSize hundred" id="hundredToActive">
                         <span class=" hundred" id="ten"> 100 x 100</span>
     
@@ -101,17 +118,10 @@
             </div>
 
 
-            <div class="flex-item ">
-                <div class="circle circleDelete">
-                    <div class="onlyABorderForDelete">
-                        <i class="fa-solid fa-trash" id="delete"></i>
-                    </div>
-                   
-                </div>
-                
-            </div>
+            
         </div>
       
+        <div id="myHeart"> ❤️ </div>
 
           
 
