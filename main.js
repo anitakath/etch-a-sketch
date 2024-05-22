@@ -38,6 +38,10 @@ function createGrid(a){
 
 /* createGrid(100);*/
 
+document.addEventListener("DOMContentLoaded", function () {
+  createGrid(100);
+});
+
 
 
 // declare a function that changes the color with the chosen value from the color picker
