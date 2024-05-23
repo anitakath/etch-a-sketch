@@ -28,15 +28,13 @@ function createGrid(a){
 
       //a bit of styling so that we can distinguish the divs from each other
 
-      // div.style.border = '1px solid black'
-      //div.innerText = i+1 
-      //div.style.color = 'red'
+  
       theGrid.appendChild(div)
  
     }
 }
 
-/* createGrid(100);*/
+
 
 document.addEventListener("DOMContentLoaded", function () {
   createGrid(100);
@@ -61,23 +59,9 @@ function divColor(){
 function changeColor(choice){
     color = choice;
 }
-/*
-function getYourColor(){
-    let color = document.getElementById('color').value;
-    this.style.backgroundColor = color;
-}
 
-//declare a function that creates random colors
-
-function getRandomColor(){
-    let magic = document.querySelector('.magic')
-    let randomColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
-    this.style.backgroundColor = randomColor;
-    
-}*/
 
 // declare a function that checks whether changeColor or getRandomColor should work
-
 
 
 
@@ -136,25 +120,10 @@ deleteBtn.addEventListener('click', ()=>{
 
 
 
-
-
-
-
-
 // declare an eventlistener on the colorbrush, so when it is clicked the input type=color appears
 
 const colorPicker = document.getElementById('color')
 const circleColor = document.querySelector('.circleColor')
-/*
-colorPicker.style.visibility = 'hidden'
-
-circleColor.addEventListener('click', () =>{
-    colorPicker.style.visibility = 'visible'
-})*/
-
-
-
-
 
 
 
