@@ -13,12 +13,12 @@
 :root{
     --grid-col: 1;
     --grid-row: 1;
+    --border-dark: #312F2F;
 }
 
 body{
     width: 100%;
-    background-color: #312F2F;
-    color: white;
+    background-color: #FAFAFF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +46,7 @@ header{
     justify-content: center;
     position: relative;
     top: 8px;
+
 }
 
 #madeBy{
@@ -79,7 +80,10 @@ main{
     flex-grow: 2;
     display: flex;
     justify-content: center;
-    margin: 10px 0px;
+    margin: 15px 0px;
+    padding: 15px 0px;
+    border-top: 1px solid var(--border-dark);
+    border-bottom: 1px solid var(--border-dark);
 }
 
 
@@ -92,7 +96,7 @@ main{
 
 
 
-    /*border: 5px solid purple;*/
+
  
 }
 
@@ -110,6 +114,9 @@ main{
     display: flex;
     flex-wrap: wrap;
 }
+.toolbox div{
+    display: flex;
+}
 
 .flex-item{
    width: 100px;
@@ -118,14 +125,20 @@ main{
     justify-content: center;
     align-items: center;
     background: rgba(255,255,255, 0.8);
-
+    border: 0.5px solid var(--border-dark);
 }
 
 
 
 /* -------------------------------------------------------------------------------------------  ABOUT THE FLEX-ITEM 2 (POST ITS) */
 
-
+footer{
+     width:100vw;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+}
 
 .tool{
     width: 60px;
@@ -137,6 +150,12 @@ main{
     font-size: 1rem;
     position: relative;
     cursor: pointer;
+   
+}
+
+.toolbox{
+     display: flex;
+     justify-content: center;
 }
 
 .color_input{
@@ -164,13 +183,28 @@ main{
 }
 
 
-
+#myHeart{
+    width: 100vw;
+    padding: 0px 20px;
+    
+}
 
 @media screen and (max-width: 1100px){
     
     
+   
     header{
-        height: 10vh;
+        height: 15vh;
+    }
+
+    main{
+        top: 0px;
+    }
+
+    footer{
+        position: relative;
+        top: 0px;
+       
     }
 
     #madeBy{
@@ -186,6 +220,7 @@ main{
 
 
 
+
 @media screen and (max-width: 600px){
 
     .flex-item{
@@ -196,7 +231,14 @@ main{
      #madeBy{
        top: 40px;
        right: -45px;
+       top: 60px;
     }
+
+    #myHeart{
+    width: 100vw;
+    padding: 10px 20px;
+    
+}
 }
 
 
@@ -211,13 +253,57 @@ main{
        top: 70px;
     }
 
+    footer{
+        top: 0;
+        left: 0;
+    
+    }
+
+    .toolbox{
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+
+    }
 
     .flex-item{
-        width: 50px;
+        width: 100px;
         height: 50px;
+        margin: 3px 10px;
+
+      
+    }
+
+    .size span{
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 380px){
+
+   
+    .flex-item{
+        width: 100px;
+        height: 60px;
+        margin: 3px 10px;
+
       
     }
 }
 
 
-// media queries für < 400px???
+@media screen and (max-width: 300px){
+    #theGrid{
+        height: 300px;
+    }
+
+   
+    .flex-item{
+        width: 70px;
+        height: 50px;
+        margin: 3px 10px;
+
+      
+    }
+}
